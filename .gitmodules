@@ -1,0 +1,9 @@
+[submodule "coredns-plugin"]
+	path = coredns-plugin
+	url = https://github.com/JourneyBean/nexns-coredns-plugin.git
+[submodule "controller"]
+	path = controller
+	url = https://github.com/JourneyBean/nexns-controller.git
+[submodule "controller-webui"]
+	path = controller-webui
+	url = https://github.com/JourneyBean/nexns-controller-webui.git
