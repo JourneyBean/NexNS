@@ -7,3 +7,6 @@
 [submodule "controller-webui"]
 	path = controller-webui
 	url = https://github.com/JourneyBean/nexns-controller-webui.git
+[submodule "ddns-client"]
+	path = ddns-client
+	url = https://github.com/JourneyBean/nexns-ddns-client.git
