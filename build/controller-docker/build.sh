@@ -44,4 +44,4 @@ set +ex
 rm -rf ./build/controller-docker/app
 rm -rf ./build/controller-docker/etc
 rm ./build/controller-docker/dist.tar
-rm ./controller-webui/dist
+rm -rf ./controller-webui/dist
