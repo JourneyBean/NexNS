@@ -36,8 +36,11 @@ source /app/.venv/bin/activate
 
 cd /app/controller
 
+# migrate the database
 python3 manage.py migrate
-# python3 manage.py collectstatic --noinput
+
+# set database permission if created (only for sqlite)
+chown www-data:www-data /data/data/db.sqlite3
 
 # Start Supervisor
 supervisord -c /etc/supervisor/supervisord.conf
