@@ -9,7 +9,7 @@ nginx -t
 
 # settings.py
 if [ -f /data/config/settings.py ]; then
-    cp /data/config/settings.py /app/controller/main/settings.py
+    cp /data/config/settings.py /app/controller/main/nexns_settings.py
 fi
 
 # initialize

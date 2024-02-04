@@ -38,7 +38,7 @@ tar cf ./dist.tar ./app ./etc
 cd ../../
 
 # build docker
-docker build -t nexns:v0.0.1-test .
+docker build -t nexns-controller:v0.0.1-test .
 
 # clean
 set +ex
