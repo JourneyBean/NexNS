@@ -20,6 +20,7 @@ rsync -a --progress ../../controller/main ./app/controller --exclude "__pycache_
 rsync -a --progress ../../controller/nexns ./app/controller --exclude "__pycache__"
 rsync -a --progress ../../controller/manage.py ./app/controller
 rsync -a --progress ../../controller/requirements.txt ./app/controller
+rsync -a --progress ./nexns_settings.py ./app/controller/main/
 # webui
 rsync -a --progress ../../controller-webui/dist/ ./app/webui/
 # nginx
