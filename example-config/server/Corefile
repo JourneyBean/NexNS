@@ -1,0 +1,8 @@
+. {
+  log
+  nexns {
+    controller http://localhost:8001
+    client_id xxxxxxx
+    client_secret xxxxxxx
+  }
+}

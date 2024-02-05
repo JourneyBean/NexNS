@@ -1,0 +1,30 @@
+version: "3"
+services:
+
+  redis:
+    image: redis:latest
+    container_name: nexredis
+    command: redis-server --appendonly no --requirepass '!!!your_redis_password!!!'
+    volumes:
+      - ./config/redis.conf:/usr/local/etc/redis/redis.conf
+    networks:
+      default:
+        ipv4_address: 192.168.221.2
+
+  nexnsctl:
+    image: nexns-controller:v0.0.1-test
+    ports:
+      - "8001:80"
+    volumes:
+      - ./config:/data/config
+      - ./data:/data/data
+    networks:
+      default:
+        ipv4_address: 192.168.221.3
+
+networks:
+  default:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.221.0/24
