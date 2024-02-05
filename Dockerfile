@@ -19,7 +19,7 @@ RUN apt update && \
     rm -rf /var/lib/apt/lists/* && \
     python3 -m venv /app/.venv && \
     /app/.venv/bin/pip3 install --no-cache-dir -r controller/requirements.txt && \
-    /app/.venv/bin/pip3 install --no-cache-dir gunicorn && \
+    /app/.venv/bin/pip3 install --no-cache-dir gunicorn channels-redis && \
     chmod +x /app/entrypoint.sh
 
 EXPOSE 80
