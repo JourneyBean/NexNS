@@ -1,0 +1,13 @@
+[Unit]
+Description=NexNS DNS Server
+
+[Service]
+User=nexns
+Group=nexns
+Type=simple
+ExecStart=/opt/nexns-server/coredns -conf /etc/nexns-server/config.cfg
+Restart=always
+AmbientCapabilities=CAP_NET_BIND_SERVICE
+
+[Install]
+WantedBy=multi-user.target
