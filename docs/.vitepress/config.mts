@@ -58,7 +58,14 @@ export default defineConfig({
                 link: '/zh/deploy/controller/deploy',
                 items: [
                   { text: '部署', link: '/zh/deploy/controller/deploy'},
-                  { text: '配置', link: '/zh/deploy/controller/config'},
+                  {
+                    text: '配置',
+                    link: '/zh/deploy/controller/config/backend',
+                    items: [
+                      { text: '服务配置', link: '/zh/deploy/controller/config/backend'},
+                      { text: 'Web 服务配置', link: '/zh/deploy/controller/config/webserver'},
+                    ]
+                  },
                 ]
               },
               

@@ -49,7 +49,7 @@ sudo cd /opt/nexns
 sudo chown -R root:root ./*
 ```
 
-现在建议修改一下配置文件，至少把 redis 密码改一下，可参考下一小节。
+现在建议修改一下配置文件，至少把 redis 密码改一下，可参考 [服务访问配置](/zh/deploy/controller/config/backend) 小节。
 
 修改完成后，启动即可：
 
@@ -60,3 +60,25 @@ sudo docker-compose up -d
 ## 源码部署
 
 待补充
+
+## 手动添加客户端
+
+目前还不支持在 WebUI 添加客户端，请在容器内执行命令添加。
+
+``` bash
+docker exec -it 1a2b3c bash
+root@1a2b3c:/app# source /app/.venv/bin/activate
+(.venv) root@1a2b3c:/app# cd /app/controller/
+(.venv) root@1a2b3c:/app/controller# python ./manage.py add_client
+```
+
+## 手动添加用户 API Key
+
+目前还不支持在 WebUI 添加用户的 API Key，请在容器内执行命令添加。
+
+``` bash
+docker exec -it 1a2b3c bash
+root@1a2b3c:/app# source /app/.venv/bin/activate
+(.venv) root@1a2b3c:/app# cd /app/controller/
+(.venv) root@1a2b3c:/app/controller# python ./manage.py add_apikey
+```
